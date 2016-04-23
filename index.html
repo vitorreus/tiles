@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+body, html { margin: 0; padding: 0; }
+i { height: 206px; width: 206px;
+ background-size: cover; 
+ display: none; 
+ background-position: 50% 25%;
+  margin: 2px 3px 3px 2px;
+   position: absolute; 
+}
+i:after {	
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  content: '';
+ 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.container{
+    max-width:800px;
+    margin: auto;
+}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="javascript-detect-element-resize/jquery.resize.js"></script>
+	<script type="text/javascript" src="blocos.js"></script>
+	<script type="text/javascript">
+
+	function randomColor(){
+		var h = Math.floor(Math.random()*255);
+		var s = Math.floor(Math.random()*00)+40;
+		var v = Math.floor(Math.random()*20)+60;
+		return "hsl("+h+","+s+"%,"+v+"%)";
+	}
+
+
+
+	$(document).ready(function(){
+		for (var i=0;i<20;i++){
+			$(".container").append($("<i>div</i>").css("background",randomColor())) ;
+		}
+		blockCfg =function(){
+			blocos('.container','i');
+		}
+		//window.addEventListener('resize', blockCfg);
+		blockCfg();
+
+	}) 
+	</script>
+</head>
+<body>
+start of the container<br>
+yadayada<br>
+<div class="container"></div>
+End of the container
+</body>
+</html>

@@ -1,0 +1,3 @@
+[submodule "javascript-detect-element-resize"]
+	path = javascript-detect-element-resize
+	url = git@github.com:sdecima/javascript-detect-element-resize.git
